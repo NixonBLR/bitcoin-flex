@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+body {font-family: 'Didact Gothic', sans-serif;}
+a {text-decoration: none;}
+a:visited {color: rgb(0, 0, 238);}
+
+/*Стили для шапки сайта*/
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: wrap;
+	background-image: linear-gradient(to top, #FFD700, white);}
+
+.header_logo {margin:auto; padding: 10px;}
+.header_logo img {width: 100%;}
+
+.header_nav {
+    flex-grow: 2;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;}
+
+.header_nav_login {width: 100%;}
+.header_nav_login a:hover {text-decoration: underline;}
+.header_nav_login li, .header_nav_menu li {display: inline-block; margin: 10px;}
+
+.header_nav_login ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;}
+	
+.header_nav_menu a:hover {text-shadow: 1px 1px 1px red;}
+.header_nav_menu ul {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+	flex-wrap: wrap;}
+
+/*Стили контейнера, содержащего блок с контентом и левое меню*/
+#conteiner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;}
+
+p {text-indent: 20px; margin-top: 10px; line-height: 130%;}
+
+/*Стили для левой колонки с меню*/
+aside {
+	text-align: center;
+	font-family: 'Russo One', sans-serif;
+	padding: 10px;
+	background-image: linear-gradient(to bottom, #FFD700, white);}
+
+aside a {text-decoration: none;}
+aside a:hover {text-decoration: underline; color: red;}
+aside h4 {text-align: center; padding: 20px 0 10px;}
+aside li {padding-left: 10px; padding-bottom: 10px;}
+
+/*Стили для основного блока с текстом*/
+section {
+	text-align: justify;
+	background-color: #FFF8DC;
+	padding: 15px;
+	border: 1px solid #0000FF;
+	border-right: none;
+	border-left: none;}
+
+section a:hover {text-decoration: underline;}
+
+section h1 {
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;}
+
+.article_head {
+	text-indent: 10%;
+	font-weight: bold;
+	font-style: italic;
+	margin-top: 10px;}
+
+.right {
+	float: right;
+	max-width: 50%;
+	margin-left: 10px;
+	margin-top: 10px;}
+
+.left {
+	float: left;
+	max-width: 50%;
+	margin-right: 10px;
+	margin-top: 10px;}
+
+/*Стили для футера*/
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: #C0C0C0;}
+
+footer img {
+	max-width: 50px;
+	margin: 8px;}
+	
+footer li {margin: 5px;}
+
+footer a:hover {
+	text-decoration: underline;
+	color: red;}
+
+.visited-links a, .visited-links a:visited {
+	color: black;
+	font-size: 20px;
+	margin: 5px;}
+
+/*Стили для кнопки "НАВЕРХ"*/
+#go-top {display: none;}
+#go-top:hover {box-shadow: 0 0 10px #0000FF;}
+
+#go-top li {display: none;}
+#go-top:hover li {display: block;}
+#go-top:hover li:hover {
+	text-shadow: 1px 1px 1px red;
+	font-size: 1.1em;
+	padding: 1px;}
+
+/*Медиа-запросы*/
+@media all and (min-width: 860px){
+	.header_nav_login ul {justify-content: flex-end;}}
+
+@media all and (min-width: 500px){
+	.header_nav_menu ul {display: inline;}
+	#conteiner {flex-direction: row;}
+	aside li{text-align: left;}
+	section {border-left: 1px solid #0000FF;}
+	.right, .left {max-width: 20%;}
+	
+	#go-top {
+	display: inline-block;
+	position: fixed;
+	left: 20px;
+	bottom: 80px;
+	text-align: center;
+	padding: 5px;
+	background-color: #F0FFFF;
+	border: 2px solid #87CEFA;}	
+}
+
+@media all and (min-width: 250px){footer {flex-direction: row;}}
